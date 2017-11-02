@@ -1,0 +1,63 @@
+{
+  "name": "custom_channel_jibo",
+  "displayName": "Custom Channel Jibo",
+  "description": "Channel for a test integration with a robot",
+  "category": "",
+  "documentLink": "",
+  "needsOAuth": false,
+  "uiSpec": {
+    "providerTabs": [
+      {
+        "text": "Settings",
+        "params": [
+          "inbound",
+          "variables"
+        ]
+      }
+    ]
+  },
+  "providerData": [
+    {
+      "param": "url",
+      "displayName": "Custom Channel Outbound URL",
+      "description": "URL to add in Custom Channel Settings",
+      "type": "STRING",
+      "optional": true
+    },
+    {
+      "param": "verification_token",
+      "displayName": "Verification Token",
+      "description": "Custom Channel Verification Token",
+      "type": "STRING",
+      "optional": true
+    },
+    {
+      "param": "inbound_hook",
+      "displayName": "Custom Channel Inbound URL",
+      "description": "Inbound Channel given by Custom Channel",
+      "type": "STRING",
+      "optional": true
+    },
+    {
+      "param": "inbound",
+      "displayName": "Inbound URL",
+      "description": "URL to send your Webhook to",
+      "type": "STRING",
+      "optional": true,
+      "readOnly": true
+    },
+    {
+      "param": "variables",
+      "displayName": "Variables",
+      "description": "Custom Channel Variables",
+      "type": "MAP",
+      "optional": true
+    }
+  ],
+  "module": [],
+  "hasOAuth": false,
+  "externalCalls": [
+    "webhook",
+    "inbound"
+  ]
+}
